@@ -4,6 +4,7 @@ This module computes several statistics from a list of numbers.
 import math
 import sys
 import time
+from typing import Counter
 
 # pylint: disable=trailing-whitespace
 class ComputeStatistics:
@@ -23,16 +24,21 @@ class ComputeStatistics:
         numbers = []
         with open(self.data, 'r', encoding='utf-8') as f:
             for line in f:
+                line = line.strip()
+                line = line.replace(',', '.') # Replace comma with dot
+                line = line.replace(';', '.') # Replace semicolon with dot
                 try:
-                    numbers.append(int(line))
+                    numbers.append(float(line))
                 except ValueError:
                     # Remove non-numeric characters
+                    print(f"Invalid value: '{line}'. Trying to extract number...")
                     cleaned_number = ''.join(filter(str.isdigit, line)) 
                     # Check if the line contains a number
                     if cleaned_number != '': 
-                        numbers.append(int(cleaned_number))
+                        print(f"Extracted number of '{line}': {cleaned_number}")
+                        numbers.append(float(cleaned_number))
                     else:
-                        print(f"Invalid value: {line}")
+                        print(f"Invalid value: '{line}'. Skipping...")
         return numbers
     
     def compute_mean(self, numbers: list) -> float:
@@ -68,7 +74,7 @@ class ComputeStatistics:
             return (numbers[mid - 1] + numbers[mid]) / 2
         return numbers[mid]
     
-    def compute_mode(self, numbers: list) -> float:
+    def compute_mode(self, numbers: list) -> float | None:
         """
         Compute the mode of the numbers.
 
@@ -80,11 +86,12 @@ class ComputeStatistics:
         """
         if len(numbers) == 0:
             return 0.0
-        freq = {}
-        for num in numbers:
-            freq[num] = freq.get(num, 0) + 1
-        mode = max(freq, key=freq.get)
-        return mode
+        freq = Counter(numbers)
+        max_freq = max(freq.values())
+        mode = [num for num, count in freq.items() if count == max_freq]
+        if len(mode) > 1:
+            return mode[-1]
+        return None
     
     def compute_variance(self, numbers: list) -> float:
         """

@@ -1,7 +1,7 @@
 count: 12624
-mean: 8545.830560836503
-median: 2715.0
-mode: 75
-variance: 123363602.7823644
-standard_deviation: 11106.916889144548
-Execution time: 0.014222145080566406s.
+mean: 149.00267347908746
+median: 147.75
+mode: None
+variance: 17007.920843018794
+standard_deviation: 130.41441961308877
+Execution time: 0.00686335563659668s.

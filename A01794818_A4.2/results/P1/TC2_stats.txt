@@ -1,7 +1,7 @@
 count: 1977
 mean: 250.7840161861406
-median: 247
-mode: 230
+median: 247.0
+mode: None
 variance: 20785.36913247923
 standard_deviation: 144.17131868884059
-Execution time: 0.0010325908660888672s.
+Execution time: 0.0009531974792480469s.
