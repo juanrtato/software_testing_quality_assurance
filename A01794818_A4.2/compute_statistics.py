@@ -12,8 +12,8 @@ class ComputeStatistics:
     """
     Class to compute the statistics of a file containing a list of numbers.
     """
-    def __init__(self, file):
-        self.data = file
+    def __init__(self, filepath):
+        self.data = filepath
 
     def read_data(self) -> list:
         """
@@ -23,23 +23,27 @@ class ComputeStatistics:
             list: List of numbers.
         """
         numbers = []
-        with open(self.data, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                line = line.replace(',', '.') # Replace comma with dot
-                line = line.replace(';', '.') # Replace semicolon with dot
-                try:
-                    numbers.append(float(line))
-                except ValueError:
-                    # Remove non-numeric characters
-                    print(f"Invalid value: '{line}'. Trying to extract number...")
-                    cleaned_number = ''.join(filter(str.isdigit, line)) 
-                    # Check if the line contains a number
-                    if cleaned_number != '': 
-                        print(f"Extracted number of '{line}': {cleaned_number}")
-                        numbers.append(float(cleaned_number))
-                    else:
-                        print(f"Invalid value: '{line}'. Skipping...")
+        try:
+            with open(self.data, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    line = line.replace(',', '.') # Replace comma with dot
+                    line = line.replace(';', '.') # Replace semicolon with dot
+                    try:
+                        numbers.append(float(line))
+                    except ValueError:
+                        # Remove non-numeric characters
+                        print(f"Invalid value: '{line}'. Trying to extract number...")
+                        cleaned_number = ''.join(filter(str.isdigit, line)) 
+                        # Check if the line contains a number
+                        if cleaned_number != '': 
+                            print(f"Extracted number of '{line}': {cleaned_number}")
+                            numbers.append(float(cleaned_number))
+                        else:
+                            print(f"Invalid value: '{line}'. Skipping...")
+        except FileNotFoundError:
+            print(f"Error: File {self.data} not found.")
+            return None
         return numbers
     
     def compute_mean(self, numbers: list) -> float:
