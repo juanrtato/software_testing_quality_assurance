@@ -4,4 +4,4 @@ median: 247.0
 mode: None
 variance: 20785.36913247923
 standard_deviation: 144.17131868884059
-Execution time: 0.0011298656463623047s.
+Execution time: 0.0010983943939208984s.
