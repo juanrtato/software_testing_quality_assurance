@@ -1,5 +1,5 @@
 # Directory organization
-
+```bash
 ├── compute_statistics.py
 ├── convert_numbers.py
 ├── word_count.py
@@ -86,3 +86,5 @@
 │       └── TC5
 │           └── WordCountResults.txt
 └── word_count.py
+
+```bash
