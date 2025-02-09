@@ -1,5 +1,66 @@
-# Directory organization
+# Instructions to Execute and Replicate the Exercises
 
+## Requirements
+Before running the exercises, make sure you have Python 3 installed. You can install the required dependencies using:
+
+```sh
+pip install -r requirements.txt
+```
+
+### Problem 1: Compute Statistics
+To execute the script for computing statistics on test cases from Problem 1, run the following command:
+
+```sh
+python3 compute_statistics.py data/P1/TCX.txt
+```
+Replace TCX.txt with the desired test case file from the data/P1 directory.
+
+Example:
+```sh
+python3 compute_statistics.py data/P1/TC5.txt
+```
+Results will be saved in:
+```sh
+results/P1/TCX/StatisticsResults.txt
+```
+
+### Problem 2: Convert Numbers
+To execute the script for number conversion on test cases from Problem 2, run:
+
+```sh
+python3 convert_numbers.py data/P2/TCX.txt
+```
+Replace TCX.txt with the desired test case file from the data/P2 directory.
+
+Example:
+```sh
+python3 convert_numbers.py data/P2/TC3.txt
+```
+Results will be saved in:
+```sh
+results/P2/TCX/ConvertionResults.txt
+```
+
+### Problem 3: Word Count
+To execute the script for word count on test cases from Problem 3, run:
+
+```sh
+python3 word_count.py data/P3/TCX.txt
+```
+Replace TCX.txt with the desired test case file from the data/P3 directory.
+
+Example:
+```sh
+python3 word_count.py data/P3/TC5.txt
+```
+Results will be saved in:
+```sh
+results/P3/TCX/WordCountResults.txt
+```
+
+
+# Directory organization
+```sh
 ├── compute_statistics.py
 ├── convert_numbers.py
 ├── word_count.py
@@ -86,3 +147,4 @@
 │       └── TC5
 │           └── WordCountResults.txt
 └── word_count.py
+```
