@@ -56,7 +56,7 @@ class ComputeSales:
 
         Args:
             filename (str): Filename path to save the results.
-            execution_time (float): _description_
+            execution_time (float): Execution time.
         """
         if filename:
             # create the directory if it does not exist
