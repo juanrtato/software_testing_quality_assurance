@@ -60,6 +60,7 @@ results/P3/TCX/WordCountResults.txt
 
 
 # Directory organization
+
 ```sh
 ├── compute_statistics.py
 ├── convert_numbers.py
