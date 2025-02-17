@@ -45,7 +45,7 @@ python3 test/unit/hotels_reservation_test.py
 ├── hotels_reservation.py
 ├── instructions
 │   └── Actividad 6.2_Ejercicios-1.pdf
-├── __inti__.py
+├── __init__.py
 ├── main_hotels.py
 ├── __pycache__
 │   └── hotels_reservation.cpython-310.pyc
