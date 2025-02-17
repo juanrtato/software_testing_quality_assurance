@@ -2,7 +2,7 @@
 # Hotel Management System
 
 ## Requirements
-Before running the exercises, make sure you have Python 3 installed. You can install the required dependencies using:
+Before running the application and test, make sure you have Python 3 installed. You can install the required dependencies using:
 
 ```sh
 pip install -r requirements.txt
