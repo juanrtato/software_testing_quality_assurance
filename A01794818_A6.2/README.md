@@ -2,7 +2,7 @@
 # Hotel Management System
 
 ## Requirements
-Before running the exercises, make sure you have Python 3 installed. You can install the required dependencies using:
+Before running the application and test, make sure you have Python 3 installed. You can install the required dependencies using:
 
 ```sh
 pip install -r requirements.txt
@@ -32,7 +32,7 @@ python3 test/unit/hotels_reservation_test.py
 - data/: Stores application data, including customers, hotels, and reservations in JSON format.
 - hotels_reservation.py: The core module that handles hotel management functionalities.
 - evidence/: Contains execution evidence, including screenshots of the system running and linting results.
-- test/: Includes unit tests for the system.
+- test/unit/: Includes unit tests for the system.
 ```sh
 ├── data
 │   ├── customers.json
