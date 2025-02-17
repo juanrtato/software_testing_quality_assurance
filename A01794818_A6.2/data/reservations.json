@@ -1,0 +1,17 @@
+[
+    {
+        "reservation_id": 1,
+        "customer_id": 1,
+        "room_count": 2
+    },
+    {
+        "reservation_id": 2,
+        "customer_id": 1,
+        "room_count": 2
+    },
+    {
+        "reservation_id": 3,
+        "customer_id": 2,
+        "room_count": 20
+    }
+]
